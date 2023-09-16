@@ -1,14 +1,9 @@
 package org.example;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-@Getter
-@Setter
 public class Block {
 
     private String hash;
@@ -51,6 +46,10 @@ public class Block {
             hash = calculateBlockHash();
         }
         return hash;
+    }
+
+    public String getHash(){
+        return this.hash;
     }
 
 
